@@ -180,11 +180,6 @@ question-01/
 - Quick access ke verifikasi
 - Jumlah log pending bawahan
 
-### Status Badge
-- 🟡 **Pending** - Kuning
-- 🟢 **Disetujui** - Hijau
-- 🔴 **Ditolak** - Merah
-
 ## Authorization
 
 ### Middleware
@@ -198,13 +193,6 @@ question-01/
 - `update` - Pemilik log pending, atau Kepala Dinas untuk log auto-approved miliknya
 - `delete` - Pemilik log pending, atau Kepala Dinas untuk log auto-approved miliknya
 - `verify` - Hanya atasan langsung dari pemilik log (tidak berlaku untuk log Kepala Dinas)
-
-## Testing
-
-```bash
-# Jalankan PHPUnit tests
-php artisan test
-```
 
 ## API Routes
 
@@ -224,10 +212,6 @@ php artisan test
 | GET | /verifications | List subordinate logs | auth, has.subordinates |
 | GET | /verifications/{id} | Show verification form | auth, has.subordinates |
 | POST | /verifications/{id} | Process verification | auth, has.subordinates |
-
-## License
-
-MIT License
 
 ---
 
